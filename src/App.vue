@@ -243,7 +243,7 @@ export default {
           (price1 + price2 + price3 + price4 + price5) /
           5
         ).toFixed(3);
-        //$('#average').html( " <i class='fa fa-bar-chart' aria-hidden='true'></i> "+' average: $' + avgArr[i - delta - 1] )
+     
       }
       this.avgArr[this.avgArr.length - 1] = (
         (this.arr[this.arr.length - 1] +
@@ -351,16 +351,10 @@ img {
   width: 70px;
   height: 70px;
 }
-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
-}
 
 header ul.mui-list--inline {
   margin-bottom: 0;
+  margin-right: 2em;
 }
 
 header a {
@@ -399,14 +393,14 @@ header table {
   margin-left: 3em;
 }
 #mui-row {
-  margin-top: 10em;
+  margin-top: 2em;
   margin-left: 2em;
   margin-right: 4em;
 }
 /* contact form */
 form {
   width: 100%;
-  margin-right: 3em;
+  margin-left: 3em;
   margin-top: 5em;
 }
 
