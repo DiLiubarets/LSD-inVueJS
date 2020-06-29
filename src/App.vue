@@ -73,7 +73,7 @@
 
     <div id="footer">
       <div class="mui-container mui--text-center">
-        <a href="https://github.com/DiLiubarets/project-1">
+        <a href="https://github.com/DiLiubarets/LSD-inVueJS">
           View project code on Github
           <br />
           <i class="fa fa-github" aria-hidden="true"></i>
