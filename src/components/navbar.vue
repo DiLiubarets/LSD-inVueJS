@@ -29,8 +29,5 @@
         </tr>
       </table>
     </header>
-
-
-
 </template>
 

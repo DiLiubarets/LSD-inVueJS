@@ -1,7 +1,7 @@
 <template>
   <div class="mui-panel">
     <div class="mui--text-body2">
-      <div class="mui--text" id="description"> {{currentCoin}}</div>
+      <div class="mui--text" id="description">{{currentCoin}}</div>
     </div>
   </div>
 </template>
@@ -34,8 +34,8 @@ export default {
   },
   methods: {
     changeDescription: function(coin) {
-        this.currentCoin = this.aboutCoin[coin]
-      }
+      this.currentCoin = this.aboutCoin[coin];
+    }
   }
 };
 </script>
