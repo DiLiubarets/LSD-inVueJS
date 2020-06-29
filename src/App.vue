@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <navbar> </navbar>
-     
+    <navbar></navbar>
+
     <div class="mui-row" id="mui-row">
       <chart ref="chart"></chart>
       <div class="mui-col-md-4">
@@ -10,14 +10,12 @@
       </div>
     </div>
 
-
-
     <div id="cryptoNews">
       <br />
       <div class="mui--text-display4 mui--text-center">{{globalCoin.toUpperCase()}} NEWS</div>
       <div class="mui-container">
         <div id="news" class="mui-row">
-        <template v-for="article in articles">
+          <template v-for="article in articles">
             <div class="mui-col-md-4">
               <div class="card-example mui--text-center mui--z1">
                 <img :src="article.urlToImage" id="card-img" alt />
@@ -34,16 +32,16 @@
                 </div>
               </div>
             </div>
-        </template>
+          </template>
         </div>
-        
-        <br>
+
+        <br />
 
         <div id="news" class="mui-row">
-        <template v-for="article in articles2">
+          <template v-for="article in articles2">
             <div class="mui-col-md-4">
               <div class="card-example mui--text-center mui--z1">
-                <img :src="article.urlToImage" id="card-img" alt="">
+                <img :src="article.urlToImage" id="card-img" alt />
                 <div class="label">
                   <br />
                   <div
@@ -57,34 +55,31 @@
                 </div>
               </div>
             </div>
-        </template>
-        </div> 
-
+          </template>
+        </div>
       </div>
     </div>
 
-    <br>
+    <br />
 
-<div  class="mui-row">
-  <div class="mui-col-md-12">
-   <aboutProject></aboutProject>
-  </div>
-    <div class="mui-col-md-6">
-       <contactForm></contactForm>
-    
+    <div class="mui-row">
+      <div class="mui-col-md-12">
+        <aboutProject></aboutProject>
+      </div>
+      <div class="mui-col-md-6">
+        <contactForm></contactForm>
+      </div>
     </div>
-</div>
-    
-<div id="footer">
-  <div class="mui-container mui--text-center">
+
+    <div id="footer">
+      <div class="mui-container mui--text-center">
         <a href="https://github.com/DiLiubarets/project-1">
-          View project code on Github<br /><i
-            class="fa fa-github"
-            aria-hidden="true"
-          ></i>
+          View project code on Github
+          <br />
+          <i class="fa fa-github" aria-hidden="true"></i>
         </a>
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -107,8 +102,7 @@ export default {
     dropDownMenu: dropDownMenu,
     aboutCoin: aboutCoin,
     contactForm: contactForm,
-    aboutProject: aboutProject,
-    
+    aboutProject: aboutProject
   },
 
   data: function() {
@@ -223,8 +217,8 @@ export default {
         "&sortBy=publishedAt&apiKey=46f225ffb36d463dbf82d74ee65a1700";
       var self = this;
       axios.get(urlNews).then(response => {
-        self.articles = (response.data.articles).splice(0,3)
-        self.articles2 = (response.data.articles).splice(3,3)
+        self.articles = response.data.articles.splice(0, 3);
+        self.articles2 = response.data.articles.splice(3, 3);
       });
     },
 
@@ -243,7 +237,6 @@ export default {
           (price1 + price2 + price3 + price4 + price5) /
           5
         ).toFixed(3);
-     
       }
       this.avgArr[this.avgArr.length - 1] = (
         (this.arr[this.arr.length - 1] +
@@ -405,11 +398,11 @@ form {
 }
 
 /* about project */
-#aboutProjectPanel{
+#aboutProjectPanel {
   margin-top: 5em;
   margin-left: 2em;
-   margin-right: 2em;
-  }
+  margin-right: 2em;
+}
 /* style title */
 #title-crypto {
   padding-left: 1em;
@@ -425,7 +418,7 @@ form {
 
 .card-example img {
   width: 100%;
-  height: 250px
+  height: 250px;
 }
 
 .card-example span.title {
@@ -443,25 +436,25 @@ form {
   margin-top: 10em;
   box-sizing: border-box;
   height: 70px;
-  color:#09203f;
+  color: #09203f;
   background-color: #eee;
   /* border-top: 1px solid #e0e0e0; */
-   padding-top: 20px;
-} 
+  padding-top: 20px;
+}
 
 @media (min-width: 768px) {
   #description {
     float: left;
   }
 }
-.darkmode{
+.darkmode {
   width: 100%;
   min-height: 100%;
-  background: #F3F3F3;
-  color:#15202B
-  }
-  .dark{
-    background: #192734;
-    color:#F3F3F3;
-    }
+  background: #f3f3f3;
+  color: #15202b;
+}
+.dark {
+  background: #192734;
+  color: #f3f3f3;
+}
 </style>

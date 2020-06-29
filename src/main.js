@@ -5,6 +5,7 @@ import Chart from 'chart.js'
 import 'bootstrap/dist/css/bootstrap.css'
 Vue.use(Chartkick.use(Chart))
 
+
 Vue.config.productionTip = false
 
 new Vue({

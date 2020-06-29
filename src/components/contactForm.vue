@@ -15,8 +15,7 @@
           <textarea v-model="message" id="inputMessage" required></textarea>
           <label>Textarea</label>
         </div>
-        <button
-          @click.prevent="sentEmail"
+        <button @click.prevent="sentEmail"
           id="submitEmail"
           type="submit"
           class="mui-btn mui-btn--flat"
